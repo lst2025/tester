@@ -33,6 +33,8 @@ jobs:
           with:
             repository: mohdtayyab/NV_frontend
             token: ${{ secrets.my_pat }}
+            path: ./tester
+            submodules: recursive
         - name: pull files
           run: |
             touch test.json
