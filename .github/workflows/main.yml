@@ -28,6 +28,11 @@ jobs:
 
         - name: Checkout repository
           uses: actions/checkout@v2
+        - name: Check out my other private repo
+          uses: actions/checkout@master
+          with:
+            repository: mohdtayyab/NV_frontend
+            token: ${{ secrets.my_pat }}
         - name: pull files
           run: |
             touch test.json
